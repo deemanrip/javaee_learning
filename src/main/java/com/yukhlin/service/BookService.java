@@ -1,4 +1,4 @@
-package com.yukhlin;
+package com.yukhlin.service;
 
 import com.yukhlin.logger.Loggable;
 import com.yukhlin.model.Book;
