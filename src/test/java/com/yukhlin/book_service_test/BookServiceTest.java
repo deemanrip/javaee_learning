@@ -1,4 +1,4 @@
-package com.yukhlin.service_test;
+package com.yukhlin.book_service_test;
 
 import com.yukhlin.service.BookService;
 import com.yukhlin.model.Book;
@@ -12,6 +12,7 @@ public class BookServiceTest {
     @Test
     public void shouldCheckNumberIsMOCK() {
         Weld weld = new Weld();
+        System.setProperty(Weld.ARCHIVE_ISOLATION_SYSTEM_PROPERTY, "false");
         WeldContainer container = weld.initialize();
 
         BookService bookService = container.select(BookService.class).get();

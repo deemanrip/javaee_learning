@@ -5,7 +5,7 @@ http://xmlns.jcp.org/xml/ns/javaee/beans_1_1.xsd"
        version="1.1" bean-discovery-mode="all">
 
     <alternatives>
-        <class>com.yukhlin.number_generator.MockGenerator</class>
+        <class>com.yukhlin.book_service_test.MockGenerator</class>
     </alternatives>
 
     <interceptors>
