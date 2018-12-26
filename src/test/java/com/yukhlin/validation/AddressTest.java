@@ -23,6 +23,11 @@ public class AddressTest {
         validator = vf.getValidator();
     }
 
+    @AfterClass
+    public static void close() {
+        vf.close();
+    }
+
     @Test
     public void shouldRaiseConstraintViolationCauseInvalidZipCode() {
         Address address = new Address("233 street", "New York", "NY", "DummyZip", "USA");
@@ -32,10 +37,5 @@ public class AddressTest {
         Assert.assertEquals("invalid zip code", violations.iterator().next().getMessage());
         Assert.assertEquals("{com.yukhlin.validation.constraints.ZipCode.message}", violations.iterator().next().getMessageTemplate());
         Assert.assertEquals("DummyZip", violations.iterator().next().getInvalidValue());
-    }
-
-    @AfterClass
-    public static void close() {
-        vf.close();
     }
 }
