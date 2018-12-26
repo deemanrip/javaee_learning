@@ -25,7 +25,7 @@ public class Address {
     public Address() {
     }
 
-    public Address(String street1, @NotNull String city, String state, String zipcode, String country) {
+    public Address(String street1, String city, String state, String zipcode, String country) {
         this.street1 = street1;
         this.city = city;
         this.state = state;
