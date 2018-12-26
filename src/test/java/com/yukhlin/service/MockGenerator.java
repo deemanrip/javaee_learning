@@ -1,8 +1,8 @@
-package com.yukhlin.book_service_test;
+package com.yukhlin.service;
 
 import com.yukhlin.logger.Loggable;
 import com.yukhlin.number_generator.NumberGenerator;
-import com.yukhlin.number_generator.ThirteenDigits;
+import com.yukhlin.number_generator.qualifiers.ThirteenDigits;
 
 import javax.enterprise.inject.Alternative;
 import javax.inject.Inject;

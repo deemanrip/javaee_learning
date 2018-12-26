@@ -3,7 +3,7 @@ package com.yukhlin.service;
 import com.yukhlin.logger.Loggable;
 import com.yukhlin.model.Book;
 import com.yukhlin.number_generator.NumberGenerator;
-import com.yukhlin.number_generator.ThirteenDigits;
+import com.yukhlin.number_generator.qualifiers.ThirteenDigits;
 
 import javax.inject.Inject;
 

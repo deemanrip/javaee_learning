@@ -1,6 +1,5 @@
-package com.yukhlin.book_service_test;
+package com.yukhlin.service;
 
-import com.yukhlin.service.BookService;
 import com.yukhlin.model.Book;
 import org.jboss.weld.environment.se.Weld;
 import org.jboss.weld.environment.se.WeldContainer;

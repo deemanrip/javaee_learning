@@ -1,6 +1,7 @@
 package com.yukhlin.number_generator;
 
 import com.yukhlin.logger.Loggable;
+import com.yukhlin.number_generator.qualifiers.ThirteenDigits;
 
 import javax.inject.Inject;
 import java.util.Random;
