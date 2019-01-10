@@ -1,19 +1,26 @@
 package com.yukhlin;
 
 import com.yukhlin.model.Book;
-import com.yukhlin.service.BookService;
-import org.jboss.weld.environment.se.Weld;
-import org.jboss.weld.environment.se.WeldContainer;
+
+import javax.persistence.EntityManager;
+import javax.persistence.EntityManagerFactory;
+import javax.persistence.EntityTransaction;
+import javax.persistence.Persistence;
 
 public class Main {
     public static void main(String[] args) {
-        Weld weld = new Weld();
-        WeldContainer container = weld.initialize();
+        Book book = new Book("H2G2", 12.5F, "Test book for persisting",
+                "1-84023-742-2", 354, false);
 
-        BookService bookService = container.select(BookService.class).get();
-        Book book = bookService.createBook("Java Core", 11.6f, "Good book about Java");
-        System.out.println(book);
+        EntityManagerFactory emf = Persistence.createEntityManagerFactory("bookShop");
+        EntityManager em = emf.createEntityManager();
+        EntityTransaction tx = em.getTransaction();
 
-        weld.shutdown();
+        tx.begin();
+        em.persist(book);
+        tx.commit();
+
+        em.close();
+        emf.close();
     }
 }

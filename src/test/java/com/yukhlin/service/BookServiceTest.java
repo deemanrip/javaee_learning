@@ -16,7 +16,7 @@ public class BookServiceTest {
 
         BookService bookService = container.select(BookService.class).get();
         Book book = bookService.createBook("Java Core", 11.6f, "Good book about Java");
-        Assert.assertTrue(book.getNumber().startsWith("MOCK"));
+        Assert.assertTrue(book.getIsbn().startsWith("MOCK"));
 
         weld.shutdown();
     }
