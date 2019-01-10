@@ -36,7 +36,7 @@ public class BookEntityTest {
 
     @Test
     public void shouldCreateH2G2Book() {
-        Book book = new Book("H2G2", 12.5F, "Test book",
+        Book book = new Book("H2G2", 12.5F, "Test book for persisting",
                 "1-84023-742-2", 354, false);
 
         tx.begin();
@@ -46,7 +46,7 @@ public class BookEntityTest {
         Assert.assertNotNull("Id can't be null", book.getId());
 
         book = em.createNamedQuery("findBookH2G2", Book.class).getSingleResult();
-        Assert.assertEquals("Test book", book.getDescription());
+        Assert.assertEquals("Test book for persisting", book.getDescription());
     }
 
     @Test(expected = ConstraintViolationException.class)
